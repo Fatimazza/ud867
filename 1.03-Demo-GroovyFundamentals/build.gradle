@@ -1,11 +1,4 @@
 task groovy {}
 
-def foo = 6.5
-println "foo has value: $foo"
 
-println "let's do some math. 5 + 6 = ${5 + 6}"
 
-println "foo is type : ${foo.class} and has value: $foo"
-
-foo = "a String"
-println "foo now is type : ${foo.class} and has value: $foo"
