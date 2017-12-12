@@ -1,10 +1,11 @@
 task groovy {}
 
-class JavaGreeter {
-    public static void sayHello() {
-        System.out.println("Hello Java!");
-    }
-}
+def foo = 6.5
+println "foo has value: $foo"
 
-JavaGreeter greeter = new JavaGreeter()
-greeter.sayHello()
+println "let's do some math. 5 + 6 = ${5 + 6}"
+
+println "foo is type : ${foo.class} and has value: $foo"
+
+foo = "a String"
+println "foo now is type : ${foo.class} and has value: $foo"
