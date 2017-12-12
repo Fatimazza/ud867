@@ -1,5 +1,20 @@
 task groovy {}
 
+def noArgs() {
+    println "Called the no args function"
 }
 
+def oneArg(x) {
+    println "Called the 1 arg function with $x"
+    x
+}
 
+def twoArgs(x, y) {
+    println "Called the 2 args function with $x and $y"
+    x + y
+}
+
+noArgs() //without parentheses will error
+oneArg 500
+twoArgs 200, 300
+twoArgs oneArg (500), 200 //without parentheses will ambiguous
