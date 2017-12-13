@@ -14,7 +14,7 @@ or, more compactly
 
 task stringsAndTypes {
     doLast {
-        // TODO: Run `$ gradle sAT`
+        // COMPLETED: Run `$ gradle sAT`
         println "Nice work abbreviating the task name"
 
         // TODO: Create a variable named foo and assign it the value 4.2
