@@ -66,9 +66,12 @@ task lists {
         // COMPLETED Create a new list of your candies in all caps
         // HINT: http://mrhaki.blogspot.ca/2010/05/groovy-goodness-use-collect-with.html
         List uppercaseCandies = candies.collect { it.toUpperCase() }
+        List lowCandieswithInitialValue =
+                candies.collect(["Froyo","Cake"]) { it.toLowerCase() }
 
         // COMPLETED Print each capital candy
         uppercaseCandies.each { println "The candy name is $it" }
+        lowCandieswithInitialValue.eachWithIndex { item, i -> println "Candy $i: $item" }
 
         //Note: List can be changed to 'def' type
     }
