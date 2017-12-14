@@ -17,9 +17,11 @@ task stringsAndTypes {
         // COMPLETED: Run `$ gradle sAT`
         println "Nice work abbreviating the task name"
 
-        // TODO: Create a variable named foo and assign it the value 4.2
+        // COMPLETED Create a variable named foo and assign it the value 4.2
+        def foo = 4.2
 
-        // TODO: Print the value and class of foo
+        // COMPLETED Print the value and class of foo
+        println "Foo is type of class ${foo.class} and has value $foo"
 
         // TODO: Use string interpolation to print the square root of 127
         // HINT: http://docs.oracle.com/javase/7/docs/api/java/lang/Math.html
