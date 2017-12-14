@@ -59,13 +59,17 @@ task closures {
 
 task lists {
     doLast {
-        // TODO: Declare a list containing 5 of your favorite candies
+        // COMPLETED Declare a list containing 5 of your favorite candies
         // HINT: Try searching for "groovy list literal"
+        List candies = ["Lollipop", "Chocolate", "Froyo", "Bublegum", "Cake"]
 
-        // TODO: Create a new list of your candies in all caps
+        // COMPLETED Create a new list of your candies in all caps
         // HINT: http://mrhaki.blogspot.ca/2010/05/groovy-goodness-use-collect-with.html
+        List uppercaseCandies = candies.collect { it.toUpperCase() }
 
-        // TODO: Print each capital candy
+        // COMPLETED Print each capital candy
+        uppercaseCandies.each { println "The candy name is $it" }
 
+        //Note: List can be changed to 'def' type
     }
 }
