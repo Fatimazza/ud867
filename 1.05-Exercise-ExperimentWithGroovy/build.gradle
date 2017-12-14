@@ -23,13 +23,14 @@ task stringsAndTypes {
         // COMPLETED Print the value and class of foo
         println "Foo is type of class ${foo.class} and has value $foo"
 
-        // TODO: Use string interpolation to print the square root of 127
+        // COMPLETED Use string interpolation to print the square root of 127
         // HINT: http://docs.oracle.com/javase/7/docs/api/java/lang/Math.html
+        println "Square root of 127 is ${Math.sqrt(127)}"
 
         // TODO: Assign the current date to foo and print it, along with its type
-        // HINT:
-        // http://docs.oracle.com/javase/7/docs/api/java/util/package-summary.html
-
+        // HINT: http://docs.oracle.com/javase/7/docs/api/java/util/package-summary.html
+        foo = new java.util.Date()
+        println "Foo is now ${foo.class} and has value $foo"
 
         // TODO: Use the `substring` method to extract my name from this string
         def hello = "Hello, Jeremy."
