@@ -38,3 +38,13 @@ task copyWeb (type: Copy) {
 
     into 'build/web'
 }
+
+
+task bundleWeb (type: Zip, dependsOn: 'copyWeb') { //copyWeb executed first
+    baseName = 'web_zip'
+    destinationDir = file('build')
+
+    //files from copyWeb in build folder gonna be zipped
+    from ('build/web')
+    exclude 'images/**'
+}
