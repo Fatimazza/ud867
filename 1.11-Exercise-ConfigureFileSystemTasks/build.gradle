@@ -63,3 +63,7 @@ task deleteHelp (type: Delete, dependsOn: 'copyWeb') {
 
     delete 'build/web/help'
 }
+
+task deleteAll (type:Delete) {
+    delete 'build'
+}
