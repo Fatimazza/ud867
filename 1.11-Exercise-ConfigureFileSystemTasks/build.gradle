@@ -57,3 +57,9 @@ task unpackBundle (type: Copy, dependsOn: 'bundleWeb') {
     from zipTree('build/web_zip.zip')
     into 'build/exploded'
 }
+
+task deleteHelp (type: Delete, dependsOn: 'copyWeb') {
+    //copyWeb executed first
+
+    delete 'build/web/help'
+}
