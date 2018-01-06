@@ -26,7 +26,6 @@
 */
 
 task copyWeb (type: Copy) {
-
     //copy all files
     from 'src/web'
 
@@ -40,11 +39,21 @@ task copyWeb (type: Copy) {
 }
 
 
-task bundleWeb (type: Zip, dependsOn: 'copyWeb') { //copyWeb executed first
+task bundleWeb (type: Zip, dependsOn: 'copyWeb') {
+    //copyWeb executed first
+
     baseName = 'web_zip'
     destinationDir = file('build')
 
     //files from copyWeb in build folder gonna be zipped
     from ('build/web')
     exclude 'images/**'
+}
+
+task unpackBundle (type: Copy, dependsOn: 'bundleWeb') {
+    //bundleWeb executed first
+
+    //create new FileTree which contents of the given ZIP file
+    from zipTree('build/web_zip.zip')
+    into 'build/exploded'
 }
