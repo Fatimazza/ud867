@@ -28,15 +28,13 @@
 task copyWeb (type: Copy) {
 
     //copy all files
-    from ('src/web') {
-        into 'web'
-    }
+    from 'src/web'
 
     //copy files with certain extension
     from ('src/docs') {
         include '*.txt'
-        into 'web/help'
+        into 'help'
     }
 
-    into 'build'
+    into 'build/web'
 }
