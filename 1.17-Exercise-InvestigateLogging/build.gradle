@@ -29,7 +29,7 @@ class HelloTask extends DefaultTask {
     @TaskAction
     void doAction() {
         logger.info 'start HelloTask action'
-        println 'Hello World'
+        logger.lifecycle 'Hello World' //will not printed when:  gradle -q hello
         logger.info 'end HelloTask action'
     }
 }
