@@ -37,3 +37,8 @@ class HelloTask extends DefaultTask {
 task derpy << {
     primp "Herp de derp"
 }
+
+//below, run with   gradle --debug hello | grep 'catch me if you can'
+logger.debug("catch me if you can")
+logger.debug "you catch me"
+
